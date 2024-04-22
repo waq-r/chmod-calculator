@@ -28,7 +28,7 @@
       }
       .container {
         display: inline-grid;
-        grid-template-columns: repeat(3, min-content);
+        grid-template-columns: repeat(4, min-content);
         background: rgb(223, 228, 193);
         padding: 2px;
         gap: 2px;
@@ -67,8 +67,20 @@
     </style>
   </head>
   <body>
-    <h1>I ❤️ Linux</h1>
+    <h1>📟 Chmod Calculator</h1>
     <div class="container">
+      <div>
+        <span>.</span>
+        <div>
+          <pre>read</pre>
+        </div>
+        <div>
+          <pre>write</pre>
+        </div>
+        <div>
+          <pre>execute</pre>
+        </div>
+      </div>
       <div>
         <span>user</span>
         <div id="ck-button">
@@ -82,70 +94,102 @@
             <span>r</span>
           </label>
         </div>
-        <span>write</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':0, 'col':1, 'val':2})"
-          value="2"
-          name="write"
-        />
-        <span>execute</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':0, 'col':2, 'val':1})"
-          value="1"
-          name="execute"
-        />
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':0, 'col':1, 'val':2})"
+              value="2"
+              hidden
+            />
+            <span>w</span>
+          </label>
+        </div>
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':0, 'col':2, 'val':1})"
+              value="1"
+              hidden
+            />
+            <span>e</span>
+          </label>
+        </div>
       </div>
 
       <div>
         <span>group</span>
-        <span>read</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':1, 'col':0, 'val':4})"
-          value="4"
-          name="read"
-        />
-        <span>write</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':1, 'col':1, 'val':2})"
-          value="2"
-          name="write"
-        />
-        <span>execute</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':1, 'col':2, 'val':1})"
-          value="1"
-          name="execute"
-        />
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':1, 'col':0, 'val':4})"
+              value="4"
+              hidden
+            />
+            <span>r</span>
+          </label>
+        </div>
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':1, 'col':1, 'val':2})"
+              value="2"
+              hidden
+            />
+            <span>w</span>
+          </label>
+        </div>
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':1, 'col':2, 'val':1})"
+              value="1"
+              hidden
+            />
+            <span>e</span>
+          </label>
+        </div>
       </div>
 
       <div>
         <span>public</span>
-        <span>read</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':2, 'col':0, 'val':4})"
-          value="4"
-          name="read"
-        />
-        <span>write</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':2, 'col':1, 'val':2})"
-          value="2"
-          name="write"
-        />
-        <span>execute</span>
-        <input
-          type="checkbox"
-          onclick="toggle({'row':2, 'col':2, 'val':1})"
-          value="1"
-          name="execute"
-        />
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':2, 'col':0, 'val':4})"
+              value="4"
+              hidden
+            />
+            <span>r</span>
+          </label>
+        </div>
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':2, 'col':1, 'val':2})"
+              value="2"
+              hidden
+            />
+            <span>w</span>
+          </label>
+        </div>
+        <div id="ck-button">
+          <label>
+            <input
+              type="checkbox"
+              onclick="toggle({'row':2, 'col':2, 'val':1})"
+              value="1"
+              hidden
+            />
+            <span>e</span>
+          </label>
+        </div>
       </div>
     </div>
 
